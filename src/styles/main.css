@@ -1,0 +1,12 @@
+/* Mobile:  default (no query needed) */
+/* Tablet:  min-width: 768px  */
+/* Desktop: min-width: 1024px */
+/* Wide:    min-width: 1440px */
+
+/* Mobile first — base styles */
+.container { padding: 1rem; }
+
+/* Then add desktop styles on top */
+@media (min-width: 768px) {
+  .container { padding: 4rem; }
+}

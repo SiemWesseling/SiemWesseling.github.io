@@ -1,1 +1,2 @@
-console.log('Vite is running!');
+import './styles/main.css'
+import './styles/hud.css'
