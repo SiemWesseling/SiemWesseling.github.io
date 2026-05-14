@@ -10,3 +10,18 @@
 @media (min-width: 768px) {
   .container { padding: 4rem; }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e4cbae;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
