@@ -19,9 +19,22 @@ export class HeroScene
 
         // Cube
         const geometry = new THREE.BoxGeometry(1, 1, 1);
-        const material = new THREE.MeshNormalMaterial();    // rainbow-ish colors based on normals, no lights needed
+        const material = new THREE.MeshStandardMaterial({
+            color: 0x8b6f47,
+            roughness: 0.4,
+            metalness: 0.1
+        })
         this.cube = new THREE.Mesh(geometry, material);
         this.scene.add(this.cube);
+
+        // Ambient light — base illumination, like skylight
+        const ambientLight = new THREE.AmbientLight(0xfff5e6, 0.8);
+        this.scene.add(ambientLight);
+
+        // Directional light — like sunlight, parallel rays from one direction
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+        directionalLight.position.set(2, 3, 4);
+        this.scene.add(directionalLight);
     }
 
     update(elapsedTime)
