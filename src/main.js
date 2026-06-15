@@ -12,7 +12,7 @@ const tick = () =>
 {
     const elapsedTime = clock.getElapsedTime();
     heroScene.update(elapsedTime);
-    renderer.instance.render(heroScene.scene, heroScene.camera);
+    renderer.instance.render(heroScene.scene, heroScene.camera.instance);
     requestAnimationFrame(tick);
 }
 
