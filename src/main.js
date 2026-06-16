@@ -10,8 +10,8 @@ const clock = new THREE.Clock();
 
 const tick = () =>
 {
-    const elapsedTime = clock.getElapsedTime();
-    heroScene.update(elapsedTime);
+    const deltaTime = clock.getDelta();                                     // Seconds since last frame
+    heroScene.update(deltaTime);
     renderer.instance.render(heroScene.scene, heroScene.camera.instance);
     requestAnimationFrame(tick);
 }
