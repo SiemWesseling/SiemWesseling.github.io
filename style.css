@@ -22,11 +22,131 @@ html {
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
     margin: 0;
     font-family: "Inter", sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
+}
+
+.choice-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 72px;
+    background: rgba(7, 10, 18, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 100;
+    animation: overlayFade 0.8s ease forwards;
+}
+
+.choice-wrapper {
+    width: min(1100px, calc(100% - 2rem));
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: cardsSlideDown 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards;
+}
+
+.version-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+    padding: 2rem;
+    background: rgba(18, 24, 38, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.version-card:hover,
+.version-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: rgba(125, 211, 252, 0.45);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+}
+
+.version-card--right {
+    pointer-events: none;
+}
+
+.card-topline {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-badge {
+    display: inline-flex;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(125, 211, 252, 0.12);
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.card-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.card-copy h2 {
+    margin: 0;
+    font-size: clamp(2rem, 2.7vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.05em;
+}
+
+.card-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+@keyframes overlayFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardsSlideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 760px) {
+    .choice-overlay {
+        padding-top: 24px;
+    }
+
+    .choice-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .version-card {
+        min-height: 300px;
+    }
 }
 
 img {
