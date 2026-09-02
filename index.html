@@ -140,37 +140,47 @@
                     <h2>Selected work.</h2>
                 </div>
 
-                <div class="project-grid">
-                    <article class="project-card">
-                        <span class="tag">Web</span>
-                        <h3>Portfolio Website</h3>
-                        <p>
-                            A personal brand site built with semantic HTML and a polished
-                            visual system.
-                        </p>
-                        <a href="#">Learn more</a>
-                    </article>
+                <section class="project-gallery" aria-labelledby="production-heading">
+                    <div class="gallery-heading">
+                        <h3 id="production-heading">Games worked on as production</h3>
+                    </div>
 
-                    <article class="project-card">
-                        <span class="tag">Product</span>
-                        <h3>Dashboard Concept</h3>
-                        <p>
-                            A clean analytics interface focused on readability, hierarchy,
-                            and actionable insights.
-                        </p>
-                        <a href="#">Learn more</a>
-                    </article>
+                    <div class="gallery">
+                        <button class="gallery-arrow gallery-arrow--left" type="button" aria-label="Previous production project">
+                            ←
+                        </button>
 
-                    <article class="project-card">
-                        <span class="tag">Brand</span>
-                        <h3>Marketing Landing Page</h3>
-                        <p>
-                            A conversion-focused landing page with clear messaging and
-                            a lightweight, responsive layout.
-                        </p>
-                        <a href="#">Learn more</a>
-                    </article>
-                </div>
+                        <div class="gallery-track">
+                            <a class="project-card" href="#" style="--project-image: url('assets/images/project-placeholder-1.jpg');">
+                                <span class="tag">Production</span>
+                                <div class="project-card-content">
+                                    <h4>Placeholder Game One</h4>
+                                    <p>A short description of the project goes here.</p>
+                                </div>
+                            </a>
+
+                            <a class="project-card" href="#" style="--project-image: url('assets/images/project-placeholder-2.jpg');">
+                                <span class="tag">Production</span>
+                                <div class="project-card-content">
+                                    <h4>Placeholder Game Two</h4>
+                                    <p>A short description of the project goes here.</p>
+                                </div>
+                            </a>
+
+                            <a class="project-card" href="#" style="--project-image: url('assets/images/project-placeholder-3.jpg');">
+                                <span class="tag">Production</span>
+                                <div class="project-card-content">
+                                    <h4>Placeholder Game Three</h4>
+                                    <p>A short description of the project goes here.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <button class="gallery-arrow gallery-arrow--right" type="button" aria-label="Next production project">
+                            →
+                        </button>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
