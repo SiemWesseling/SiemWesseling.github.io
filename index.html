@@ -14,7 +14,7 @@
 <body>
     <div class="choice-overlay" aria-label="Website version chooser">
         <div class="choice-wrapper">
-            <a class="version-card version-card--left" href="index.html">
+            <a class="version-card version-card--left" href="index.html" data-version="clean-readability">
                 <div class="card-topline">
                     <span class="card-badge">Version 01</span>
                 </div>
@@ -28,7 +28,7 @@
                 </div>
             </a>
 
-            <div class="version-card version-card--right" aria-label="Playable portfolio version">
+            <div class="version-card version-card--right" aria-label="Playable portfolio version" data-version="playable portfolio">
                 <div class="card-topline">
                     <span class="card-badge">Version 02</span>
                 </div>
@@ -185,5 +185,7 @@
             <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
         </div>
     </footer>
+
+    <script src="assets/js/card-animation.js" defer></script>
 </body>
 </html>

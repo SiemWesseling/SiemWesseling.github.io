@@ -119,6 +119,27 @@ body {
     line-height: 1.7;
 }
 
+.choice-overlay.is-hidden {
+    display: none;
+}
+
+.choice-overlay.is-closing {
+    animation: cardsSlideUp 0.5s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes cardsSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
 @keyframes overlayFade {
     from {
         opacity: 0;
