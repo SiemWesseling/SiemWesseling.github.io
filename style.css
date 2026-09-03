@@ -354,8 +354,84 @@ h1 {
     gap: 1.5rem;
 }
 
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.skills-category {
+    padding: 1.5rem;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.skills-category h3 {
+    margin: 0 0 1.5rem;
+    font-size: 1.3rem;
+}
+
+.skill {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.skill + .skill {
+    margin-top: 1.25rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.skill-header span:first-child {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.skill-bar {
+    height: 0.45rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-strong)
+    );
+}
+
 .project-gallery {
     margin-top: 3rem;
+}
+
+.gallery-divider {
+    width: 100%;
+    height: 1px;
+    margin: 3rem 0;
+    border: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(125, 211, 252, 0.35),
+        transparent
+    );
 }
 
 .gallery-heading {
@@ -521,7 +597,8 @@ h1 {
 
 @media (max-width: 810px) {
     .hero-inner,
-    .about-grid {
+    .about-grid,
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 
