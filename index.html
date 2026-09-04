@@ -84,51 +84,66 @@
             </div>
         </section>
 
-        <section id="about" class="section">
+        <section id="about" class="about">
             <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">About</p>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit.</h2>
-                </div>
-
-                <div class="about-grid">
-                    <div class="about-card">
-                        <h3>Approach</h3>
+                <div class="about-layout">
+                    <div class="about-copy">
+                        <div class="section-heading">
+                            <h2>About.</h2>
+                        </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                            faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi 
-                            pretium tellus duis convallis. Tempus leo eu aenean sed diam urna 
-                            tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
-                            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit 
-                            semper vel class aptent taciti sociosqu. Ad litora torquent per conubia 
-                            nostra inceptos himenaeos.
+                            I am a developer, designer, and producer interested in creating
+                            games, software, applications, and websites that are engaging,
+                            useful, and clear.
                         </p>
+
+                        <p>
+                            My work combines technical development with creative problem
+                            solving. I enjoy working across disciplines, from programming and
+                            interface design to project coordination and production.
+                        </p>
+
+                        <a class="text-link" href="about.html">
+                            Read more about me <span aria-hidden="true">→</span>
+                        </a>
                     </div>
 
-                    <div class="about-card">
-                        <h3>Focus</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                            faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi 
-                            pretium tellus duis convallis. Tempus leo eu aenean sed diam urna 
-                            tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
-                            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit 
-                            semper vel class aptent taciti sociosqu. Ad litora torquent per conubia 
-                            nostra inceptos himenaeos.
-                        </p>
-                    </div>
+                    <div class="about-photo-gallery" aria-label="Photos from Siem's portfolio">
+                        <div class="about-photo-track">
+                            <img
+                                class="about-photo is-active"
+                                src="assets/images/about-placeholder-1.jpg"
+                                alt="Placeholder photo for the About section"
+                            />
 
-                    <div class="about-card">
-                        <h3>Values</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                            faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi 
-                            pretium tellus duis convallis. Tempus leo eu aenean sed diam urna 
-                            tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. 
-                            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit 
-                            semper vel class aptent taciti sociosqu. Ad litora torquent per conubia 
-                            nostra inceptos himenaeos.
-                        </p>
+                            <img
+                                class="about-photo"
+                                src="assets/images/about-placeholder-2.jpg"
+                                alt="Another placeholder photo for the About section"
+                            />
+
+                            <img
+                                class="about-photo"
+                                src="assets/images/about-placeholder-3.jpg"
+                                alt="Third placeholder photo for the About section"
+                            />
+                        </div>
+
+                        <button
+                            class="gallery-arrow gallery-arrow--left about-photo-arrow about-photo-arrow--left"
+                            type="button"
+                            aria-label="Show previous photo"
+                        >
+                            ←
+                        </button>
+
+                        <button
+                            class="gallery-arrow gallery-arrow--right about-photo-arrow about-photo-arrow--right"
+                            type="button"
+                            aria-label="Show next photo"
+                        >
+                            →
+                        </button>
                     </div>
                 </div>
             </div>
@@ -429,5 +444,6 @@
 
     <script src="assets/js/card-animation.js" defer></script>
     <script src="assets/js/gallery-behaviour.js" defer></script>
+    <script src="assets/js/about-gallery.js" defer></script>
 </body>
 </html>
